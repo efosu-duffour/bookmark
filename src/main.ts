@@ -99,14 +99,20 @@ document.addEventListener("DOMContentLoaded", () => {
     function menuSlideIn() {
         gsap.to("[mobile-nav] ul", {
             right: 0,
-            ease: "power2.out"
+            ease: "power2.out",
+            onStart: () => {
+                mobileNav.style.visibility = "visible";
+            }
         })
     }
 
     function menuSlideOut() {
         gsap.to("[mobile-nav] ul", {
             right: "-100%",
-            ease: "power2.in"
+            ease: "power2.in",
+            onComplete: () => {
+                mobileNav.style.visibility = "hidden";
+            }
         })
     }
 
