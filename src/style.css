@@ -79,6 +79,7 @@
     
     [mobile-nav] {
       
+      visibility: hidden;
       
       height: 100vh;
       height: 100dvh;
